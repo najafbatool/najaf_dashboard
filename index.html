@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Najaf — Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body class="theme-light">
+  <header class="site-header">
+    <div class="brand">
+      <h1>Najaf Batool</h1>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+
+    <div class="header-controls">
+      <div id="mini-clock" class="mini-clock" aria-hidden="true">--:--:--</div>
+      <button id="theme-toggle" class="btn small">Toggle Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="home-intro card">
+      <div class="profile">
+        <!-- ✅ Female profile image -->
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" 
+             alt="Najaf profile" 
+             class="profile-pic">
+      </div>
+
+      <div class="intro-text">
+         <h1>Welcome to My Dashboard </h1>
+      <p>
+        I'm <strong>Najaf Batool</strong>, a passionate Computer Science student dedicated to 
+        creating intelligent and inclusive digital solutions. My aim is to merge creativity, 
+        problem-solving, and technology to design interactive and meaningful web applications.
+      </p>
+      <p>
+        Currently, I’m working on my Final Year Project — <b>"Gesture Speaks"</b>, 
+        a real-time web application that translates <b>Pakistani Sign Language (PSL)</b> 
+        into readable text and speech using <b>Machine Learning</b> and <b>Computer Vision</b>. 
+        This project aims to bridge the communication gap between deaf and hearing individuals.
+      </p>
+        <div class="session-timer" aria-live="polite">
+          <div>Session time: <span id="session-time">0s</span></div>
+        </div>
+      </div>
+    </section>
+
+    
+    
+  </main>
+
+  <footer class="site-footer">
+<p>© 2025 Najaf Batool | All Rights Reserved</p>
+
+  </footer>
+
+  <script src="script.js"></script>
+  <script>initHome();</script>
+</body>
+</html>

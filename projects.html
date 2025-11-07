@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Najaf — Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+  <!-- Fixed Header -->
+  <header class="site-header">
+    <div class="brand">
+      <h1 class="logo">Najaf Batool</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" class="active">Projects</a>
+    </nav>
+    <div class="header-controls">
+      <div id="mini-clock" class="mini-clock" aria-hidden="true">--:--:--</div>
+      <button id="theme-toggle" class="btn small">Toggle Theme</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <section class="card">
+      <h2>Projects</h2>
+
+      <div class="filter-row">
+        <label for="tech-filter">Filter by Tech:</label>
+        <select id="tech-filter">
+          <option value="all">All</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="php">PHP</option>
+        </select>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-tech="html,css">
+          <h2>Gesture Speaks (Final Year Project)</h2>
+            <p><b>Description:</b> Web app that translates Pakistani Sign Language (PSL) into text and voice using
+                machine learning.</p>
+            <p><b>Technologies:</b> Python, Flask, OpenCV, Mediapipe, HTML, CSS, JS</p>
+            <p><b>Problem Statement:</b> Lack of localized PSL tools causes communication barriers for deaf individuals.
+            </p>
+            <p><b>Unique Proposition:</b> Custom dataset and real-time gesture recognition for higher accuracy.</p>
+            <p><b>Competitor Info:</b> Existing apps focus on ASL/BSL and lack real-time PSL support.</p>
+            
+
+        </div>
+
+        <div class="project-card" data-tech="javascript">
+          <h2>Portfolio Website</h2>
+            <p><b>Description:</b> Personal portfolio showcasing projects and skills.</p>
+            <p><b>Technologies:</b> HTML, CSS, JavaScript</p>
+            <p><b>Problem Statement:</b> Need for professional presentation of student projects online.</p>
+            <p><b>Unique Proposition:</b> Custom design and responsive layout.</p>
+            <p><b>Competitor Info:</b> Most templates look similar; this is hand-coded and unique.</p>
+        </div>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Najaf Batool | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>initProjects();</script>
+</body>
+</html>

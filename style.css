@@ -1,0 +1,136 @@
+:root{
+  --bg:#0b1220;
+  --card:#0f1a2b;
+  --text:#e6eef8;
+  --muted:#9fb1d0;
+  --accent:#2563eb; /* blue */
+  --accent-2:#04285d;
+  --success:#22c55e;
+  --radius:12px;
+  --gap:18px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Light theme */
+body.theme-light{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --text:#0b1220;
+  --muted:#556b87;
+  --accent:#2563eb;
+  --accent-2:#04285d;
+  --success:#16a34a;
+}
+
+/* Layout */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+main.container {
+  margin-top: 100px; /* space for fixed navbar */
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.nav a.active {
+  border-bottom: 2px solid var(--accent);
+}
+.brand{display:flex;align-items:center;gap:18px}
+.brand h1{margin:0;font-size:20px;letter-spacing:0.4px;color:var(--accent)}
+.nav a{margin-right:12px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;transition:all 0.18s}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,0.03);transform:translateY(-2px)}
+.nav a.active{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:white}
+
+.header-controls{display:flex;align-items:center;gap:12px}
+.btn{background:var(--accent);border:none;color:white;padding:8px 12px;border-radius:10px;cursor:pointer;transition:transform .12s,opacity .12s}
+.btn:hover{transform:translateY(-3px);opacity:0.95}
+.btn.small{padding:6px 8px;font-size:13px}
+
+/* Container */
+.container{max-width:980px;margin:28px auto;padding:0 16px;display:grid;gap:20px}
+
+/* Cards */
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.5);transition:transform .15s}
+.card:hover{transform:translateY(-6px)}
+
+.profile{flex:0 0 160px}
+.profile-pic{width:160px;height:160px;border-radius:12px;object-fit:cover;border:3px solid rgba(255,255,255,0.04)}
+
+/* Home intro layout */
+.home-intro{display:flex;gap:18px;align-items:center}
+.intro-text h2{margin:0 0 8px 0}
+.session-timer{margin-top:12px;font-weight:600;color:var(--muted)}
+
+/* Contact form */
+.contact form{display:grid;gap:12px}
+.form-row{display:flex;flex-direction:column}
+.form-row label{font-size:13px;margin-bottom:6px;color:var(--muted)}
+.form-row input,.form-row textarea{
+  padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.05);
+  background:transparent;color:var(--text);outline:none;transition:box-shadow .12s
+}
+.form-row input:focus,.form-row textarea:focus{box-shadow:0 6px 18px rgba(2,6,23,0.45)}
+.error{color:#ffb4b4;height:16px;font-size:12px;margin-top:6px}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
+.skill{display:flex;flex-direction:column;gap:8px}
+.skill-head{display:flex;justify-content:space-between;align-items:center}
+.progress{height:14px;background:rgba(255,255,255,0.04);border-radius:10px;overflow:hidden}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:10px;transition:width 1.2s ease}
+
+/* Projects */
+.filter-row{display:flex;gap:12px;align-items:center;margin:12px 0}
+.projects-grid{display:grid;gap:12px}
+.project-card{padding:12px;border-radius:10px;border-left:4px solid rgba(255,255,255,0.03)}
+.project-card a{color:var(--accent);text-decoration:none}
+.project-card a:hover{text-decoration:underline}
+
+/* Footer */
+.site-footer{max-width:980px;margin:24px auto;color:var(--muted);padding:0 16px}
+
+/* Mini clock */
+.mini-clock{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);font-weight:600;min-width:92px;text-align:center}
+
+/* Responsive */
+@media (max-width:760px){
+  .home-intro{flex-direction:column;align-items:center;text-align:center}
+  .profile-pic{width:120px;height:120px}
+  .site-header{flex-direction:column;align-items:flex-start;gap:10px}
+}
+
+/* Small animation for progress bars on page load */
+.progress-bar.animate{
+  /* width set by JS */
+}
+
+/* subtle hover for project cards */
+.project-card:hover{background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));transform:translateY(-4px);transition:transform .12s,background .12s}
